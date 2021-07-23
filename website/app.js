@@ -1,5 +1,5 @@
 /* Global Variables */
-
+//learning git by using this repo.
 /* soooorrrryyyy of my bad english */
 
 // Create a new date instance dynamically with JS
