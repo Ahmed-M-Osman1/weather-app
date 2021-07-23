@@ -13,10 +13,16 @@ This will require modifying the `server.js` file and the `website/app.js` file. 
 
 ## Extras
 I add many extrapoints like:
+
 1-I add alert that zip code is empty and this will excute if only zip code left empty.
+
 2-I add extra information like were are this zip code and humidity to make this api more usable such as country and humidity.
+
 3-I convert the C to F inside the function and did not used extranal function. I think this is good way. I did not want the code to be longer
+
 4-toFix to make the 1 decimal we not want to make the temp with alot of decimals
+
+by the way: I'm learning git so you will see alot of commits please ignor them this is the last version.
 
 I hope to aprove my project.
 
