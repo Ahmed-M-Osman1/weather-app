@@ -5,7 +5,7 @@ body{
 
 #app{
     display: grid;
-    grid-auto-rows: minmax(150px, auto);
+    grid-auto-rows: minmax(80px, auto);
     /* grid-template-columns:  */
     height:100vh;
     background: #f23557;
@@ -41,12 +41,14 @@ body{
 }
 
 .headline {
-
+    font-size: 4em;
 }
 .title{
 
 }
-
+.myName {
+    font-size: 1em;
+}
 /*  Basic Styling To Override Default For Basic HTML Elements */
 label{
     display:block;
@@ -74,6 +76,7 @@ button{
     border: none;
     box-shadow: 2px 4px 5px #444;
 }
+
 h1{
     font-size: 36px;
 }
@@ -108,4 +111,4 @@ button:focus {
     color: #f0d43a; 
     font-family: 'Oswald', sans-serif;
 
-} 
+}
