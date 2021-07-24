@@ -16,7 +16,8 @@ const generateKey = document.getElementById("generate");
 
 /* add event listener that will take the zip code value using async function that will use await and fetch.
 Important: this is the main function addEventListener*/
-let mainFunction = generateKey.addEventListener("click", async ()=>{
+
+generateKey.addEventListener("click", async ()=>{
   // idintfay some global variables that we will use its value in the results section.
   const contentOfFeeling = document.getElementById('feelings').value
   const zipCode = document.getElementById('zip').value
@@ -36,9 +37,9 @@ console.log("the zip code is" , zipCode)
         const place = weatherAPIData.name;
         const humidity = weatherAPIData.main.humidity;
         console.log(temprture) // I want to delete it but i think it will be usefull for you to check that two values are idntical here and in the index.html
-        return serverSection (temprture,contentOfFeeling,country,place,humidity) // {temprture,contentOfFeeling,country,place,humidity};
-      })
-      
+        return {temprture,contentOfFeeling,country,place,humidity};
+      });
+
 // server section: 
 // in this section the data will go out and in the server and save it so I can use it in display my data
 // Important: this is the most importatnt function that will convert the date to readable and store it. without it we can't read.
@@ -62,13 +63,13 @@ async function serverSection (temprture,contentOfFeeling,country,place,humidity)
                 place: place,
                 humidity: humidity
             }),
-          }).then((finalFormOfData) =>{displayResults(finalFormOfData)})
-          
+          })
+          .then((finalFormOfData) =>{displayResults(finalFormOfData)})
           // get Reqest Data.
           const serverRes = await fetch("/getReqData", {
           credentials: 'same-origin'
-          });
-           
+          })
+          
           // the final form of data.
           const finalFormOfData = await serverRes.json();
             };
