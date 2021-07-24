@@ -37,9 +37,10 @@ console.log("the zip code is" , zipCode)
         const place = weatherAPIData.name;
         const humidity = weatherAPIData.main.humidity;
         console.log(temprture) // I want to delete it but i think it will be usefull for you to check that two values are idntical here and in the index.html
-        return serverSection(temprture,contentOfFeeling,country,place,humidity)
-      });
-
+        // return serverSection(temprture,contentOfFeeling,country,place,humidity)
+      })
+      .then((temprture,contentOfFeeling,country,place,humidity) =>{serverSection (temprture,contentOfFeeling,country,place,humidity)})
+      .then((finalFormOfData) =>{displayResults(finalFormOfData)})
 
 // server section: 
 // in this section the data will go out and in the server and save it so I can use it in display my data
