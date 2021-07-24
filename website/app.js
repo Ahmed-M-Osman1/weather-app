@@ -68,7 +68,7 @@ async function serverSection (temprture,contentOfFeeling,country,place,humidity)
           const serverRes = await fetch("/getReqData", {
           credentials: 'same-origin'
           });
-          
+           
           // the final form of data.
           const finalFormOfData = await serverRes.json();
             };
